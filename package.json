@@ -1,0 +1,57 @@
+{
+  "name": "antavision-designer2",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "build": {
+    "appId": "myapp",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {}
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "electron-is-dev": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "wait-on": "^5.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+
+    "ebuild": "npm run build && electron-builder",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron \""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^9.1.2",
+    "electron-builder": "^22.8.0",
+    "electron-reload": "^1.5.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,1 @@
+A basic React (create-react-app) + Electron app, so i don't have to fight with the documentation every time. I'll try to keep this up to date.
